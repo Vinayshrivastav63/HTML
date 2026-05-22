@@ -1,0 +1,45 @@
+Implementing a Java Script program to implement onSelect and onLoad event
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onSelect and onLoad Events</title>
+</head>
+
+<body>
+    <h1>onSelect and onLoad Events Example</h1>
+
+    <p>Select a color:</p>
+    <select id="colorSelect">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <p id="selectedColor"></p>
+
+    <script>
+        // Function to handle the onSelect event
+        function onSelectChange() {
+            var select = document.getElementById("colorSelect");
+            var selectedColor = select.options[select.selectedIndex].value;
+            var selectedColorText = select.options[select.selectedIndex].text;
+
+            document.getElementById("selectedColor").innerHTML = "You selected: " + selectedColorText + " (" + selectedColor + ")";
+        }
+
+        // Function to handle the onLoad event
+        function onLoad() {
+            document.getElementById("selectedColor").innerHTML = "Please select a color.";
+        }
+
+        // Attach the onSelect event handler to the select element
+        var select = document.getElementById("colorSelect");
+        select.addEventListener("change", onSelectChange);
+
+        // Attach the onLoad event handler to the window's load event
+        window.addEventListener("load", onLoad);
+    </script>
+</body>
+
+</html>

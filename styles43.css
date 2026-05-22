@@ -1,0 +1,19 @@
+nav ul{
+    list-style-type: style type;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color:red;
+    font-weight: bold;
+    font-size: 18px;
+
+} nav ul li a:hover{
+    color:green;
+
+}

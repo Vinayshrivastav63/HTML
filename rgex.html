@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phone Number Validation</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f2f2f2;
+    }
+
+    .box {
+      width: 300px;
+      background: white;
+      padding: 20px;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Phone Number Check</h3>
+
+  <input type="text" id="num" placeholder="3ewr">
+
+  <input type="radio" name="type" value="national" checked> National (India)<br>
+  <input type="radio" name="type" value="international"> International
+
+  <button onclick="checkNumber()">Check</button>
+
+  <p id="result"></p>
+</div>
+
+<script>
+  function checkNumber() {
+    var number = document.getElementById("num").value;
+    var type = document.querySelector('input[name="type"]:checked').value;
+    var result = document.getElementById("result");
+
+    var national = /^[6-9][0-9]{9}$/;   // Indian number
+    var international = /^\+[1-9][0-9]{7,14}$/; // International number
+
+    if (type === "national") {
+      if (national.test(number)) {
+        result.innerHTML = "Valid Indian Number";
+        result.style.color = "green";
+      } else {
+        result.innerHTML = "Invalid Indian Number";
+        result.style.color = "red";
+      }
+    } else {
+      if (international.test(number)) {
+        result.innerHTML = "Valid International Number";
+        result.style.color = "green";
+      } else {
+        result.innerHTML = "Invalid International Number";
+        result.style.color = "red";
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

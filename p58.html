@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Augmented Function Example</title>
+</head>
+<body>
+    <h1>Augmented Function Example</h1>
+
+    <p>Original Function:</p>
+    <pre id="originalFunctionOutput"></pre>
+
+    <p>Augmented Function:</p>
+    <pre id="augmentedFunctionOutput"></pre>
+
+    <script>
+        function originalFunction(a,b) {
+            return a + b;
+        }
+
+        function augmentedFunction(a,b) {
+            var result = originalFunction(a,b);
+            result = "The result is: " + result;
+            return result;
+        }
+
+        var originalResult = originalFunction(5,3);
+        document.getElementById("originalFunctionOutput").textContent = originalResult;
+
+        var augmentedResult = augmentedFunction(5,3);
+        document.getElementById("augmentedFunctionOutput").textContent = augmentedResult;
+    </script>
+</body>
+</html>

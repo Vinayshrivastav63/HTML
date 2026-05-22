@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Script Object Creation</title>
+</head>
+<body>
+    <h1>Java Scripts Object Creation</h1>
+    <h2>Object Literal:</h2>
+    <script>
+        var personLiteral = {
+            firstName: "Vinay",
+            lastName: "Shrivastav",
+            age: 30
+        };
+
+        document.write("Name: " + personLiteral.fistName + " " + personLiteral/lastName + "<br>");
+        document.write("Age: " + personLiteral.age + "<br>");
+    </script>
+
+    <h2>Object Instance:</h2>
+    <script>
+        //Using Object Instantiation
+        var personInstance = new Object();
+        personInstance.firstName = "Vinay";
+        personInstance.lastName = "Shrivastav";
+        personInstance.age = 25;
+
+        document.write("Name: " + personInstance.firstName + " " + personInstance.lastName + "<br>");
+        document.write("Age: " + personInstance.age + "<br>");
+    </script>
+
+    <h2>Object Constructor:</h2>
+    <script>
+        function Person(fistName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+
+        var personConstructor = new Person("Neeraj", "Mittal", 35);
+        var personConstructor1 = new Person("Archit", "Goel", 34);
+
+        document.write("Name: " + personConstructor.firstName + " " + personConstructor.lastName + "<br>");
+        document.write("Name: " + personConstructor1.firstName + " " + personConstructor1.lastName + "<br>");
+        document.write("Age: " + personConstructor.age + "<br>");
+    </script>
+</body>
+</html>

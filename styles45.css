@@ -1,0 +1,57 @@
+/* Floats Layout */
+.content {
+    overflow: hidden;
+}
+
+section {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Additional styles for navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/*
+Flexbox Layout:
+
+/* Flexbox Layout */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section {
+    flex: 0 0 calc(33.33% - 40px);
+    box-sizing: border-box;
+    padding: 20px;
+}
+*/
+
+/*
+
+CSS Grid Layout:
+
+/* CSS Grid Layout */
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+section {
+    box-sizing: border-box;
+    padding: 20px;
+}
+*/

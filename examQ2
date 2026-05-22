@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block-Level Elements Demo</title>
+    <style>
+        .section-container {
+            border: 3px solid #2c3e50;
+            margin: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+        }
+
+        .button-section {
+            border: 3px dashed #e74c3c;
+            margin: 20px;
+            padding: 15px;
+            background-color: #fdf2f2;
+        }
+
+        h1, p, div {
+            border: 1px solid #3498db;
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            max-width: 200px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-container">
+        <h1>Heading (Block Element)</h1>
+        <p>This paragraph is a block-level element. Notice how the blue borders show that these elements extend the full width of their container.</p>
+        <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+    </div>
+
+    <div class="button-section">
+        <button type="button">Action Button</button>
+    </div>
+
+</body>
+</html>
